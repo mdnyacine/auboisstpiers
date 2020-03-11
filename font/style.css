@@ -1,0 +1,56 @@
+.cta-container {
+  margin: 0;
+  text-align: center;
+}
+.cta-container a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0 2.5em;
+  position: relative;
+  background: #B28272;
+  border: none;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .2em;
+  color: #4B4C5A;
+  z-index: 2;
+  transition: .6s;
+  border: 2px solid #4B4C5A;
+}
+.cta-container a:before {
+  content: attr(data-title);
+  color: #B28272;
+  opacity: 0;
+  transition: 0.5s opacity ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.cta-container a:hover:before {
+  opacity: 1;
+}
+.cta-container a:after {
+  content: '';
+  width: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  background: #4B4C5A;
+  transition: 0.5s width ease, 0.5s left ease, 0.5s right ease, 0.5s opacity ease;
+  z-index: 2;
+}
+.cta-container a:hover:after {
+  width: 100%;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
